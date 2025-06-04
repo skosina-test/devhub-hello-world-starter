@@ -1,0 +1,12 @@
+---
+site_name: devhub-hello-world-starter
+site_description: Contains the Hello World Starter Application for devhub-hello-world
+repo_url: https://gitlab.cee.redhat.com/skosina-test/devhub-hello-world-starter
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - devhub-hello-world-starter Documentation: index.md

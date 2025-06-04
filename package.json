@@ -1,0 +1,16 @@
+{
+    "name": "hello-world-app",
+    "version": "1.0.0",
+    "description": "A simple hello world application",
+    "main": "dist/hello-world.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/hello-world.js"
+    },
+    "author": "Savitoj Singh",
+    "license": "MIT License",
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "typescript": "^4.0.0"
+    }
+}

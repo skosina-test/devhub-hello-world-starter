@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #FFF; /* Light mode background */
+            color: #333; /* Light mode text color */
+        }
+        @media (prefers-color-scheme: dark) {
+            body, html {
+                background-color: #333; /* Dark mode background */
+                color: #FFF; /* Dark mode text color */
+            }
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            margin: 20px 0; /* Added some margin around the text for better spacing */
+        }
+        .pulse-container {
+            display: flex;
+            justify-content: space-between;
+            width: 200px; /* Adjusted width to better space out the pulses */
+            height: 40px;
+        }
+        .pulse {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: pulse 4s infinite ease-in-out;
+        }
+        .pulse:nth-child(1) {
+            background-color: #ff7f50; /* Coral */
+            animation-delay: 0s;
+        }
+        .pulse:nth-child(2) {
+            background-color: #6495ed; /* Cornflower Blue */
+            animation-delay: 0.5s;
+        }
+        .pulse:nth-child(3) {
+            background-color: #ffd700; /* Gold */
+            animation-delay: 1s;
+        }
+        .pulse:nth-child(4) {
+            background-color: #32cd32; /* Lime Green */
+            animation-delay: 1.5s;
+        }
+        .pulse:nth-child(5) {
+            background-color: #ff8c00; /* Dark Orange */
+            animation-delay: 2.0s;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pulse-container">
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+        <h1 id="message">Loading...</h1>
+    </div>
+    <script>
+        fetch('/api/message')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').textContent = data.message;
+            });
+    </script>
+</body>
+</html>

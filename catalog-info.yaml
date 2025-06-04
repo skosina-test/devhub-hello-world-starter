@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: skosina-onboarding-test
+  title: Onboarding Template Test Entity
+  description: Test entity created by running the onboarding template.
+  annotations:
+    backstage.io/kubernetes-id: skosina-onboarding-test
+    backstage.io/techdocs-ref: dir:.
+    feedback/type: JIRA
+    feedback/email-to: skosina@redhat.com
+    jira/project-key: DEVHUB
+    pagerduty.com/service-id: P187X90
+    quay.io/repository-slug: dhc/devhub-maintenance
+    sonarqube.org/project-key: ALM:enterprise-pipelines-examples-nodejs
+spec:
+  type: website
+  lifecycle: experimental
+  owner: user:default/skosina
