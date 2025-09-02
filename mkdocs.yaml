@@ -10,3 +10,4 @@ plugins:
 # Note for content editors, edit only the section below
 nav:
   - devhub-hello-world-starter Documentation: index.md
+  - Second Page: second-page.md
