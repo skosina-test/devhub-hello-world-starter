@@ -2,8 +2,6 @@
 
 This is a basic Hello World application using Node.js and TypeScript for devhub-hello-world-starter. It serves a static HTML file and provides an API endpoint to retrieve different "Hello World" messages in various languages.
 
-Update for testing.
-
 ## Prerequisites
 
 Ensure you have Node.js installed on your system. You can download and install it from [Node.js official website](https://nodejs.org/).
